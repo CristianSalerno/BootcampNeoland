@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM 4</title>
+</head>
+
+<body>
+
+    <ul class="menu">
+        <li>Home</li>
+        <li>Quienes somos</li>
+        <li>Contacto</li>
+    </ul>
+
+    <ul>
+        <li>Categorias</li>
+        <li>Etiquetas</li>
+    </ul>
+
+
+    <script>
+        var listados = document.getElementsByClassName('menu')
+
+        var miUl = listados[0];
+
+        var lis = miUl.getElementsByTagName('li');
+
+        for (li of lis) {
+            console.log(li.innerText);
+        }
+    </script>
+</body>
+
+</html>

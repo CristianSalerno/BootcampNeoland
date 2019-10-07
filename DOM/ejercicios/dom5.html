@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM 5</title>
+</head>
+
+<body>
+    <p class="libro">Don Quijote de la Mancha</p>
+    <p class="refran">Con cien cañones por banda</p>
+    <p class="libro">Erase una Vez la tierra</p>
+
+
+
+    <script>
+        //Todos los parrafos que tienen la clase libro, tienen que estar en minuscula y todos los que tienen la clase refran en mayusculas
+
+        // Manera NUMERO 1
+
+        var libros = document.getElementsByClassName('libro');
+        console.log(libros)
+
+        /* 
+                for (libro of libros) {
+                    var textoInterior = libro.innerText.toLowerCase();
+                    console.log(textoInterior)
+
+                    libro.innerText = textoInterior;
+                }
+
+
+                var refranes = document.getElementsByClassName('refran')
+
+                for (refran of refranes) {
+                    var textoInteriorRefran = refran.innerText.toUpperCase();
+                    console.log(textoInteriorRefran)
+
+                    refran.innerText = textoInteriorRefran;
+                }
+         */
+
+        // Manera numero 2
+
+
+        var parrafos = document.getElementsByTagName('p');
+
+        for (parrafo of parrafos) {
+            if (parrafo.className == 'libro') {
+                var textoInterior2 = parrafo.innerText.toLowerCase();
+                parrafo.innerText = textoInterior2;
+            } else if (parrafo.className == 'refran') {
+                var textoInterior2 = parrafo.innerText.toUpperCase();
+                parrafo.innerText = textoInterior2;
+            }
+        }
+    </script>
+</body>
+
+</html>

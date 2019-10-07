@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM 6</title>
+</head>
+
+<body>
+
+    <ul id="menu">
+        <li><a href="http://www.yahoo.com">Yahoo</a></li>
+        <li><a href="http://www.google.com">Google</a></li>
+        <li><a href="http://www.amazon.es">Amazon</a></li>
+    </ul>
+</body>
+
+
+
+<script>
+    var menu = document.getElementById('menu');
+    console.log(menu)
+    var enlaces = menu.getElementsByTagName('a');
+    console.log(enlaces)
+
+    for (enlace of enlaces) {
+        enlace.href = "http://www.estudioclandestino.es"
+        enlace.title = 'Estudio Clandestino'
+    }
+</script>
+
+</html>

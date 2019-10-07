@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Metodo Join</title>
+</head>
+
+<body>
+
+
+
+
+    <script>
+        //Para convertir un metodo Json en una cadena de caracteres que se envia y contiene datos . (Medidas de seguridad)
+
+
+        var listaAnimales = new Array('leon', 'perro', 'gato', 'delfin')
+
+        var stringAnimales = listaAnimales.join()
+        console.log(listaAnimales, stringAnimales)
+
+
+        var stringAnimales2 = listaAnimales.join('-')
+        console.log(stringAnimales2)
+
+        //Split
+
+        console.log(stringAnimales2.split('-'))
+        console.log(stringAnimales2.split('-')[1])
+    </script>
+</body>
+
+</html>

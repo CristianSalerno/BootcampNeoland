@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Metodo concat Array</title>
+</head>
+
+<body>
+
+
+
+
+    <script>
+        //Sirve para concatenar 2 o mas arrays en uno mas de grande y respetando los arrays originales
+
+        var verduras = new Array('lechuga', 'pimientos', 'guisantes')
+        var carnes = new Array('pollo', 'ternera')
+        var pescados = new Array('lubina', 'Merluza')
+
+
+
+        var listaCompras = new Array()
+
+
+        //opcion1 
+        listaCompras = carnes.concat(verduras)
+        console.log(listaCompras)
+
+        //opcion2
+
+        listaCompras = carnes.concat(verduras, pescados)
+        console.log(listaCompras)
+
+        //opcion3
+
+        listaCompras = carnes.concat(pescados).concat(verduras)
+
+        console.log(listaCompras)
+    </script>
+
+</body>
+
+</html>

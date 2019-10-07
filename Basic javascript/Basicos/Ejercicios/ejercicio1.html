@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejercicio 1</title>
+</head>
+
+<body>
+
+
+
+
+    <script>
+        /*
+        Dado 54321 segundos , quiero que me digais la cantidad de horas , minutos y
+        segundos que hay en dicha sifra. Posteriormente me sacais el resultado total por pantalla.
+
+      */
+
+       /* Soy un retrasado var segundos = 54321;
+        var horas = segundos / 3600;
+        var minutos = horas / segundos;
+
+        alert(segundos + ' segundos evidentemente son ' + segundos + ' segundos');
+        alert(segundos + ' segundos son ' + horas + ' Horas');
+        alert(segundos + ' segundos son ' + minutos + ' minutos') */
+
+
+
+        var segundosTotales= 30020;
+
+        var horas=0;
+        var minutos=0;
+        var segundosRestantes=0;
+
+        horas = segundosTotales / (60*60);
+        
+        horas = parseInt(horas);
+
+        segundosRestantes = segundosTotales % (60*60);
+        
+        minutos = segundosRestantes / 60;
+
+        minutos = parseInt(minutos);
+
+
+        segundosRestantes = segundosTotales % 60;
+        
+        
+        var resultado = 'En '+segundosTotales+ ' hay ' +horas+ ' horas, '+minutos + ' minutos y ' + segundosRestantes + ' segundos';
+        
+
+        document.write(resultado);
+
+
+
+
+    </script>
+</body>
+
+</html>

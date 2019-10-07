@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bucle While</title>
+</head>
+<body>
+    
+
+
+
+
+    <script>
+        
+        var numero = parseInt(prompt('Dame un numero'));
+        
+
+        while(numero <= 10){ // numero es <= 10 , entra al bucle.
+               console.log(numero);
+               numero++; //agrega un numero, sin esto seria bucle infinito
+        }
+        
+
+
+
+        var numero = 1;
+
+        while (numero<=10) {
+            console.log(numero);
+            numero++
+            if (numero==5){
+                break;//Para cualquier estructura de control de flujo
+            }
+        }
+
+
+
+
+        var numero=0
+
+        while (numero<10){
+            numero++
+            if (numero==5){
+                continue;//Continua con el while, distinto del break
+            }
+        }
+
+    </script>
+</body>
+</html>

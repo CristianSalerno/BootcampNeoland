@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Numero distinto de 0</title>
+</head>
+
+<body>
+
+
+
+
+    <script>
+        //Hacer un programa que solicite y visualice una serie de números distintos de cero. El programa debe terminar cuando introduzcamos el valor cero que no se debe visualizar. Finalmente se desea obtener la cantidad de valores leídos distintos de cero.
+
+        var listaNumero = new Array();
+
+        do {
+            var numero = parseInt(prompt('dime numero'));
+            numero != 0 ? listaNumero.push(numero) : alert('SE FINIT')
+
+        } while (numero != 0) {
+            document.write(listaNumero)
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>array pintar dos colores</title>
+</head>
+<body>
+    
+
+
+    <script>
+       
+        var listaAlumnos = new Array();//Genera una instancia
+
+        
+
+        listaAlumnos = ['Sergio','Javier','Jorge','Patricia'] //llenar el array
+
+    
+
+        var listaHtml='<ul>';//variable para agregar el <ul> a la lista
+        var colorLi =prompt('dime un color');
+        var colordosLi=prompt('dime otro color')
+       
+
+        for (var i = 0 ; i<listaAlumnos.length; i++){
+            //para contar
+
+        if (i % 2 != 0){
+
+            listaHtml = listaHtml+ '<li style="color:'+colorLi+';">' +listaAlumnos[i]+ '</li>'//para print en pantalla de los nombres, entra y recorre el array-     
+        }
+        else 
+        {
+            listaHtml = listaHtml+ '<li style="color:'+colordosLi+';">' +listaAlumnos[i]+ '</li>'   
+        }
+        
+    }
+            listaHtml = listaHtml + '</ul>';
+
+        document.write(listaHtml);
+
+
+
+
+        //Ternario
+
+   /*      for (var i = 0 ; i<listaAlumnos.length; i++){
+            var miColor =(i%2 == 0 )? colorLi : colordosLi;
+            listaHtml = listaHtml+ '<li style="color:'+miColor+';">' +listaAlumnos[i]+ '</li>'   
+        }
+            listaHtml = listaHtml + '</ul>';
+
+            document.write(listaHtml);
+
+ */
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Json2</title>
+</head>
+<body>
+    
+
+
+    <script>
+        
+        //Objeto literal ALumno
+        var alumno= {
+            nombre:'Juan',
+            apellido:'Perez',
+            edad:'37',
+            matricula:'A3245',
+            estado:true,
+            
+        }
+        
+        document.write(alumno.nombre);
+        document.write('<br/>')
+        document.write(alumno['apellido'])
+
+        for (var key in alumno){
+            console.log(alumno[key])
+        }
+
+    </script>
+</body>
+</html>

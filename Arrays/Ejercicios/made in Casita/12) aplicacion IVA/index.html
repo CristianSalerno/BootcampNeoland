@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Aplicación Iva </title>
+</head>
+
+<body>
+
+
+
+
+
+    <script>
+        //Realiza una aplicación que pida al usuario el precio de un producto sin el IVA y el IVA a aplicar, calculando el precio total a pagar.
+
+        var precio = prompt('dime el precio')
+        var iva = prompt('dime el iva aplicable')
+
+        function calcularIva(pPrecio, pIva) {
+            var total = 0;
+
+            switch (pIva) {
+                case '21':
+                    total = 1.21 * pPrecio;
+                    break;
+
+                case '10':
+                    total = 1.1 * pPrecio
+                    break;
+            }
+
+            return total;
+        }
+
+
+        document.write(calcularIva(precio, iva))
+    </script>
+</body>
+
+</html>

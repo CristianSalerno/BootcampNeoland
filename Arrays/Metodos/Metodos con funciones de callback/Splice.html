@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Splice</title>
+</head>
+
+<body>
+    <script>
+        var listaMeses = new Array('Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto')
+
+        //splice Eliminar 6 es mi position en el array, 1 es mi cantidad de elementos a eliminar.
+        listaMeses.splice(6, 1)
+        console.log(listaMeses)
+
+
+        //splice Añadir elementos
+        //splice (n, s, valor), 
+        //n es la posicion desde la que parto
+        //s es la cantidad de elementos que elimino desde dicha posision
+        //si en s pongo 0 no elimino nada y aumento mi Array
+
+        listaMeses.splice(1, 1, 'Febrero', 'Bootcamp')
+        console.log(listaMeses)
+    </script>
+</body>
+
+</html>

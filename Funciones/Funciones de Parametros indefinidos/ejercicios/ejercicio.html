@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejercicio prueba de codigo</title>
+</head>
+<body>
+
+
+
+
+    <script>
+        //Pasar a Mayuscula
+
+        var frase ='Hola k ase'; // 'esa k aloh'
+        
+        //los Strings en JS son un objeto y tienen una serie de propiedades. tiene length y position como las listas.
+
+
+        function voltearPalabra(pPalabra){
+            var palabraVolteada = '';
+            var longitud = pPalabra.length;
+
+            for (var i = 1 ; i <= longitud ;i++)
+            {
+                palabraVolteada += pPalabra[longitud- i];
+                
+            }
+            return palabraVolteada;
+        }
+
+        alert(voltearPalabra(frase));
+        
+    </script>   
+</body>
+</html>

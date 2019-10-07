@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Find</title>
+</head>
+
+<body>
+
+
+    <script>
+        //find es igual a filter, pero solo me devuelve el primero que cumpla esa condicion
+
+
+        //me permite devolver un Array de 1 o mas elementos que cumplan la condicion de filtrado dentro de una funcion
+
+        //lista de notas 
+
+        var listaNotas = new Array({
+            nombre: 'Juan',
+            nota: 2
+        }, {
+            nombre: 'Ricardo',
+            nota: 7.5
+        }, {
+            nombre: 'Diego',
+            nota: 7
+        }, )
+
+        var primerAprobado = listaNotas.find(function (alumno) {
+            return (alumno.nota >= 5)
+        })
+        //arroja el primer aprobado
+        console.log(primerAprobado)
+
+
+
+        //funcion Arrow o flecha.
+
+        var primerAprobado = listaNotas.find(alumno => alumno.nota >= 5)
+        console.log(primerAprobado)
+
+        var primerSuspenso = (listaNotas.find(alumno => alumno.nota < 5))
+        console.log(primerSuspenso)
+    </script>
+</body>
+
+</html>

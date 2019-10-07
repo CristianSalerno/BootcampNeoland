@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Metodo Filter</title>
+</head>
+
+<body>
+
+
+
+    <script>
+        //me permite devolver un Array de 1 o mas elementos que cumplan la condicion de filtrado dentro de una funcion
+
+        //lista de notas 
+
+        var listaNotas = new Array(2, 3, 5, 6, 7, 10, 4, 5, 2, 1, 0)
+
+        //aprobados
+
+
+        var listaAprobados = new Array()
+
+        //realiza una funcion de callback que comprueba cada elemento.
+        //                          recorre                
+        listaAprobados = listaNotas.filter(buscarAprobados)
+
+
+        //retorna true o false
+        function buscarAprobados(pNota) {
+            return (pNota >= 5)
+        }
+
+        console.log(listaAprobados)
+
+
+        //lista suspensos
+
+        var listaSuspensos = new Array();
+
+        listaSuspensos = listaNotas.filter(function (itemNota) {
+            return (itemNota < 5)
+        })
+
+        console.log(listaSuspensos)
+
+        //evolucion , Arrow function
+
+        //si tengo un solo parametro va sin parentesis , si tengo dos separados por comas , van entre parentesis. tambien puedo quitar el return, funcion flecha a continuacion
+        listaSuspensos = listaNotas.filter(itemNota => itemNota < 5)
+
+        console.log(listaSuspensos)
+    </script>
+</body>
+
+</html>

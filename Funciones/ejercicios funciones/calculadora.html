@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculadora</title>
+</head>
+<body>
+    
+
+
+
+
+
+
+    <script>
+        function calcular(pNumero1 , pNumero2 ,pTipo)
+        {
+            var resultado=0;
+
+                switch(pTipo){
+
+                    case 'suma': 
+                    resultado = sumar(pNumero1,pNumero2);
+                    break;
+                    
+                    case 'resta': 
+                    resultado = restar(pNumero1,pNumero2);
+                    break;
+
+                    case 'multiplicacion': 
+                    resultado = multiplicar(pNumero1,pNumero2)
+                    break;
+                }
+                document.write(resultado)
+        }
+    
+        function sumar (pNumeroA , pNumeroB){
+            return pNumeroA + pNumeroB;
+        }
+
+        function restar (pNumeroA, pNumeroB){
+            return pNumeroA - pNumeroB;
+        }
+
+        function multpilicar(pNumeroA ,pNumeroB){
+            return pNumeroA*pNumeroB;
+        }
+
+        calcular(2,4,'suma');
+        calcular(2,6 ,'resta');
+    
+    </script>
+</body>
+</html>

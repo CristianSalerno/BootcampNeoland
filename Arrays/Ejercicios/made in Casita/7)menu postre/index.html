@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Menu postre, Ejercicio 7</title>
+</head>
+
+<body>
+
+
+
+
+
+
+    <script>
+        /*   Escribir un programa donde el usuario elija entre lo siguiente ¿Qué desea cenar? Y pueda poner dos opciones Carne o Pescado
+        Y luego se le pregunte también si desea o no postre
+        Si eligió cenar Carne->pago 23 €
+        Si eligió cenar Pescado->pago 15 € Si tomo postre->el postre valió 3 €
+        Calcular el valor total de la cena dependiendo de las opciones que elija por teclado el usuario, incluyendo una propina del 6%.*/
+
+
+        var usuario = prompt('que desea cenar, Carne , pez ?');
+        var postre = prompt('quieres postre')
+        var dejarPropina = prompt('desea dejar propina?')
+
+        var menu = {
+            carne: 23,
+            pescado: 15,
+            postre: 3
+        }
+
+        function cobrar(pUsuario, pPostre, pDejarPropina) {
+            var totalPagar = 0
+            var propina = 1.06
+
+            if (pUsuario.toLowerCase() === 'carne') {
+                totalPagar = totalPagar + menu.carne
+                console.log(totalPagar)
+            } else if (pUsuario.toLowerCase() === 'pez') {
+                totalPagar = totalPagar + menu.pescado
+                console.log(totalPagar)
+            }
+
+            if (pPostre.toLowerCase() === 'si') {
+                totalPagar = totalPagar + menu.postre
+                console.log(totalPagar)
+            }
+            if (pDejarPropina.toLowerCase() === 'si') {
+                totalPagar = totalPagar * propina
+                console.log(totalPagar)
+            }
+            document.write(`<h1>El total a pagar es: ${totalPagar}</h1>`)
+        }
+        cobrar(usuario, postre, dejarPropina)
+    </script>
+</body>
+
+</html>

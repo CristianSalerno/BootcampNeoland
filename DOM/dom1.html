@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM 1</title>
+</head>
+
+<body>
+
+    <p><strong>Juan</strong></p>
+    <p>Pepe</p>
+    <p>Carlos</p>
+
+
+
+    <script>
+        var parrafos = document.getElementsByTagName('p')
+        console.log(parrafos[0].innerText) //innerHTML texto con Html y InnerText, texto interior sin html
+        console.log(parrafos[0].innerHTML)
+
+        /*  parrafos[0].innerHTML = '<em>Neoland</em>' */
+
+
+        for (var i = 0; i < parrafos.length; i++) {
+            parrafos[i].innerText = "Primer Cambio"
+        }
+
+
+        for (parrafo of parrafos) {
+            parrafo.innerText = "Segundo Cambio for Of"
+        }
+
+        /* parrafos.forEach(element => {
+            element.innerText = 'Juan';
+        }); */
+    </script>
+</body>
+
+</html>

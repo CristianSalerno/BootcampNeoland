@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>For Each</title>
+</head>
+
+<body>
+
+
+
+
+    <script>
+        //ejecuta la funcion pasada por callback a cada rato
+        var listaAlumnos = new Array({
+                nombre: 'Juan',
+                nota: 2
+            }, {
+                nombre: 'Ricardo',
+                nota: 7.5
+            }, {
+                nombre: 'Diego',
+                nota: 7
+            }, {
+                nombre: 'Julio',
+                nota: 3
+            },
+
+        );
+
+
+        listaAlumnos.forEach(function (itemAlumno) {
+            document.write(itemAlumno.nombre + '<br>')
+        });
+
+        //con un Arrow
+        listaAlumnos.forEach(itemAlumno =>
+            document.write(itemAlumno.nota + '<br>')
+        )
+    </script>
+</body>
+
+</html>

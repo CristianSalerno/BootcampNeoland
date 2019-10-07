@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dom 3</title>
+</head>
+
+<body>
+    <h1>Primera Opcion</h1>
+    <ul>
+
+    </ul>
+
+    <h1>Segunda Opcion</h1>
+    <ul>
+
+    </ul>
+
+    <h1>Tercera Opcion</h1>
+    <ul>
+
+    </ul>
+
+    <script>
+        secciones = new Array('Home', 'Quienes Somos', 'Galeria', 'Contacto')
+
+        //Crear un menu vertical dinamico en funcion del Array
+
+
+        /* var ul = document.getElementsByTagName('ul')
+
+        for (seccion of secciones) {
+            ul[0].innerHTML += '<li>' + seccion + '</li>';
+        } */
+
+
+        // Primera Opcion
+        var miUl = document.getElementsByTagName('ul')[0];
+
+        for (seccion of secciones) {
+            // el += es para cuando recorremos un literal, para que no sobrescriba los resultados cuando recorrer en ese caso el for.
+            miUl.innerHTML += `<li>${seccion}</li>`;
+        }
+
+        //Segunda Opcion
+
+        var segundoUl = document.getElementsByTagName('ul')[1]
+
+        for (var i = 0; i < secciones.length; i++) {
+            segundoUl.innerHTML += `<li>${secciones[i]}</li>`
+        }
+
+
+        //Tercera Opcion
+        var tercerUl = document.getElementsByTagName('ul')[2];
+
+        secciones.forEach(seccion => tercerUl.innerHTML += `<li>${seccion}</li>`);
+    </script>
+</body>
+
+</html>

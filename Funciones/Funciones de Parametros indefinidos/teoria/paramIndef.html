@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Funciones de parametros indefinidos</title>
+</head>
+<body>
+    
+
+
+
+    <script>
+
+        console.log(media(2,6));
+        console.log(media(2,6,8,44,5));
+        //funcion parametros indefinidos, Importante la definicion de una funcion de este tipo no admite nombre de parametros.
+
+        function media (){
+
+            var cantidad = arguments.length;
+            var suma =0;
+            var resultado =0;
+
+            for(var i = 0; i< cantidad ; i++){
+                    suma = suma + arguments[i];
+            }
+            resultado = suma/cantidad;
+            
+            return resultado;
+        }
+
+
+
+
+        function crearFrase(){
+            var frase=""
+            for(var i =0; i<arguments.length; i++){
+                frase += arguments[i] + " "
+            }
+            return frase;
+        }
+        alert(crearFrase('nestor','tiene','sentido'));
+        
+    </script>
+</body>
+</html>

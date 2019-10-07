@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Array asociativo JSON</title>
+</head>
+<body>
+
+    
+
+
+
+    <script>
+        
+        //json o array asociativo
+
+        var producto = {
+        'Nombre':'leche',
+        'Precio':2,
+        'Tipo':'Desnatada',
+        'Capacidad':1.5,
+        'Stock':true
+    }
+
+        //nomenclatura de corchetes (esta no tanto)
+        console.log(producto ['nombre']) //Object Literal. 
+
+        //nomenclatura de punto OBJETO . ATRIBUTO (esta si)
+        console.log(producto.precio)
+        
+        //for IN
+
+        for (var clave in producto){
+            document.write(clave+': '+producto[clave]+ '<br>')
+        }
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

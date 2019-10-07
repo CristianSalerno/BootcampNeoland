@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Metodo reverse</title>
+</head>
+
+<body>
+
+
+
+
+    <script>
+        //Darle la vuelta a un Array , pero modificando el array inicial
+
+        var listaAnimales = new Array('Perro', 'Gato', 'Periquito', )
+        var listaInvertida = new Array()
+
+        listaInvertida = listaAnimales.reverse()
+        console.log(listaInvertida)
+        console.log(listaAnimales)
+
+        listaAnimales = listaAnimales.reverse()
+        console.log(listaAnimales)
+
+
+        //ES6 spreed operator (operador de propagacion.)
+
+        var listaObjetos = new Array('Peine', 'Jabon', 'Secador', 'Cepillo')
+
+        var listaObjetosInvertida = new Array();
+
+        // [...miArray].reverse()  ---> invierte solo la lista que queremos
+
+        listaObjetosInvertida = [...listaObjetos].reverse()
+        console.log(listaObjetos)
+        console.log(listaObjetosInvertida)
+    </script>
+</body>
+
+</html>

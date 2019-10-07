@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejercicio Hard</title>
+</head>
+<body>
+        <style>
+            .row:after {
+                content: ””;
+                clear: both;
+                height: 0px;
+                display: block;
+            }
+        </style>
+    
+
+
+    <script>
+         /* var radio= (pTipo != 'circulo')?  '0%' : '50%'; */
+
+
+        //Quiero poder generar un tablero de ajedrez pero quiero poder elegir cuantas casillas y de que tamaño.
+
+
+        function crearFila(pTamano,pCasillas,pEmpiezo){
+            var fila ="";
+            var color="";
+
+           for (var i=1; i<=pCasillas; i++){
+                if (pEmpiezo == "black")
+                {
+                    color =(i%2 !=0) ?'black' :'grey';
+                }
+                else
+                {
+                    color =(i%2 !=0) ?'grey' :'black';
+                }
+           
+
+                fila +='<div class="row" style="background-color: '+ color +'; width:'+ pTamano +'px; height:'+ pTamano +'px; float:left;"></div>'; //fila = fila +<div></div>         
+            
+            document.write(fila);
+        }
+    }
+        
+        crearFila(100,5);
+
+        
+
+
+
+
+    </script>
+</body>
+</html>

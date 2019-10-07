@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Array ArraySimple</title>
+</head>
+<body>
+    
+
+
+    <script>
+        //Array es un conjunto de elementos 'Casi siempre del mismo tipo' es lo que conocemos en otros lenguajes de programaciòn como vectores.(Conjunto de elementos con una unica dirección.)
+
+        var listaAlumnos = new Array();//Genera una instancia
+
+        
+
+        listaAlumnos = ['Sergio','Javier','Jorge','Patricia'] //llenar el array
+
+        console.log (listaAlumnos);//muestro en consola
+
+        //Los array tienen longitud n y se numeran de 0 a n-1.
+        
+        console.log(listaAlumnos.length)//tamaño del Array
+        console.log(listaAlumnos[0]) //posision 0 del Array
+
+        var listaHtml='<ul>';//variable para agregar el <ul> a la lista
+
+        for (var i = 0 ; i<listaAlumnos.length; i++)//para contar
+        {
+            listaHtml = listaHtml+ '<li>' +listaAlumnos[i]+ '</li>'//para print en pantalla de los nombres, entra y recorre el array-
+        }
+        listaHtml = listaHtml + '</ul>';
+
+        document.write(listaHtml);
+
+    </script>
+</body>
+</html>

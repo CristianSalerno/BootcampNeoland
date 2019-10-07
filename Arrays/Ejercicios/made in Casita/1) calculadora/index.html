@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ejercicio 1 - calculadora</title>
+</head>
+
+<body>
+
+
+
+
+
+
+    <script>
+        var numeroUno = parseInt(prompt('un numero'))
+        var numeroDos = parseInt(prompt('otro numero'))
+        var operacion = prompt('indique operacion + - * / **')
+
+
+        function calcular(numeroUno, numeroDos, operacion) {
+            var resultado = 0
+
+            switch (operacion) {
+
+                case '+':
+                    resultado = sumar(numeroUno, numeroDos);
+                    break;
+
+                case '-':
+                    resultado = restar(numeroUno, numeroDos);
+                    break;
+
+                case '*':
+                    resultado = multiplicar(numeroUno, numeroDos)
+                    break;
+                case '/':
+                    resultado = dividir(numeroUno, numeroDos)
+                    break;
+                case '**':
+                    resultado = potencia(numeroUno, numeroDos)
+            }
+            var color = (resultado < 0) ? 'red' : 'green'
+            document.write(`<h1 style="color:${color};"> Tu resultado es:${resultado}</h1>`)
+        }
+
+        calcular(numeroUno, numeroDos, operacion)
+
+
+        function sumar(numeroUno, numeroDos) {
+            return numeroUno + numeroDos;
+        }
+
+
+        function restar(numeroUno, numeroDos) {
+            return numeroUno - numeroDos;
+        }
+
+        function multiplicar(numeroUno, numeroDos) {
+            return numeroUno * numeroDos;
+        }
+
+        function dividir(numeroUno, numeroDos) {
+            return numeroUno / numeroDos
+        }
+
+        function potencia(numeroUno, numeroDos) {
+            return numeroUno ** numeroDos
+        }
+    </script>
+
+
+</body>
+
+</html>

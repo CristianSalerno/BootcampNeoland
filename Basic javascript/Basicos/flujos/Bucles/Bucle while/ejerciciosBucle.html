@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejercicios 3 Bucles</title>
+</head>
+<body>
+
+
+
+
+
+    <script>
+        
+        /* var cuadrado= '<div style="background-color: red; width:100px; height:100px"></div>';
+
+        document.write(cuadrado);
+         */
+
+        //quiero que me pinteis 25 cuadrados de colores intercalados
+        
+       var primercolor ='white';
+       var segundocolor ='black'
+       var lado = prompt('dame un tamaño de las casillas')
+       var numeroCuadrados = parseInt(prompt('Dame una cantidad de cuadrados'))
+        var filas = prompt('quieres filas o columnas?')
+
+       for(var i=1; i <= numeroCuadrados; i++){
+           
+           var color = (i%2 == 0) ? primercolor:segundocolor;
+          
+           document.write ('<div style="background-color: ' +color+ ';width:'+lado+'px; height:'+lado+'px"></div>')
+       } 
+       
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejercicios 1 de Bucles</title>
+</head>
+<body>
+    
+
+
+
+    <script>
+        /*Quiero contar 1000 numeros empezando obligatoriamente
+        por 1 pero solo quiero que aparezcan los pares*/
+        
+        /* var par = prompt('inserte un numero')
+        var numeroPar = par/2;
+         */
+
+         /* var inicial =1;
+         var final =1000;
+
+        for (var i = inicial ; i <= 1000 ; i++){
+            if (i%2  == 0){
+                alert(i)
+            }
+        } */
+
+        var inicial = parseInt(prompt ('dime un numero'))
+        var final = parseInt(prompt('dime otro numero'))
+        var tipo = prompt('Que numero quieres , par o impar')
+
+        for (var i = inicial ; i <= final ; i++ ){
+            if (i%2 ==0 && tipo == 'par'){
+                alert(i);
+            }else if (i%2 != 0 && tipo =='impar'){
+                alert(i);
+            }
+        }
+        
+    </script>
+</body>
+</html>

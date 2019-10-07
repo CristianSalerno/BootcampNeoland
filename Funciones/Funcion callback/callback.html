@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Funciones de Callback</title>
+</head>
+<body>
+    
+
+
+
+
+    <script>
+
+        //front End
+
+        function pintarUsuario(pNombre){
+            document.write ('<h1>Bienvenido '+pNombre+'</h1>')
+        }
+/* 
+        pintarUsuario('Manuel'); */
+
+
+        //back End
+x
+        function getUser (){
+            var nombre ='pepe';
+            return nombre;
+        }
+
+        //API
+
+        pintarUsuario(getUser());  //getUser es una funcion de Callback
+        
+        
+    </script>
+</body>
+</html>

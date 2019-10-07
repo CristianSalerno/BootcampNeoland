@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>trabajo final</title>
+</head>
+
+<body>
+
+
+
+
+
+
+    <script>
+        /* 
+Haz un programa que funcione de la manera siguiente:
+• Nos pida nuestro nombre.
+• Nos pida nuestro primer apellido.
+• Nos pida en que población vivimos.
+• Al final nos presente: Juan Pérez vive en Madrid Siendo el nombre y la ciudad los caracteres pedidos. */
+
+
+
+        var usuario = {
+            nombre: prompt('dime tu nombre'),
+            apellido: prompt('dime tu apellido'),
+            poblacion: prompt('dime tu poblacion')
+        }
+
+
+        function crearUsuario(pNombre, pApellido, pPoblacion) {
+            var usuarioCreado = new Array();
+
+            for (i = 1; i < 2; i++) {
+                usuarioCreado.push(usuario.nombre, usuario.apellido, usuario.poblacion)
+            }
+            console.log(usuarioCreado)
+            document.write(
+                `<h1>El usuario :${usuario.nombre}, de Apellido ${usuario.apellido} vive en, ${usuario.poblacion}</h1>`
+                )
+        }
+
+
+        crearUsuario(usuario.nombre, usuario.apellido, usuario.poblacion)
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+   
+
+    <script>
+        //quiero una aplicacion que me permita pintar una figura a elegir entre cuadrado y circulo de cualquier color y medida
+         
+       
+
+
+        function crearFigura (pTipo, pColor, pLado){
+            var radio= (pTipo != 'circulo')?  '0%' : '50%';
+
+            var figura ='<div style="background-color: '+ pColor +';width: '+ pLado +'px; height: ' + pLado +'px; border-radius: ' + radio + ';"></div>';
+
+            document.write(figura);
+        }
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Control de stock</title>
+</head>
+<body>
+    
+
+
+
+    <script>
+    
+    //crear un espacio para almacenar el total del stock
+        
+        var stock =125;
+
+    //function que muestre total del stock por consola
+    //poder aumentar el stock en una cantidad cualquiera
+
+        function controlStock(){
+            return stock
+        }
+        
+        function addStock(pCantidad){
+            stock= stock +pCantidad
+        }
+    //quiero poder comprar un numero N de productos
+
+        function comprarProd (pCantidad){
+            if (stock < pCantidad){
+                return 'no hay stock'
+            }
+                stock = stock - pCantidad; 
+               console.log(comprobarStock()) ;    
+        }
+
+        /* function comprobarStock(){
+            var comprobacion = (stock<=5) ? 'te queda 5 de stock' : 'hay stock suficiente'
+            
+            return comprobacion
+        } */
+
+        function comprobarStock()
+        {
+            if (stock <5){
+                addStock(100)
+                return 'se han comprado 100 unidades por falta de stock'
+            }
+            else
+            {
+                return 'stock suficiente'
+            }
+        }
+        
+    </script>
+</body>
+</html>

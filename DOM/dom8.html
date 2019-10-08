@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM 8</title>
+</head>
+
+<body>
+
+
+
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum quis minima tenetur doloribus quas nihil totam id
+        distinctio rem? Repellat veritatis ex exercitationem iste itaque quis eveniet quae, voluptate minima?</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit libero unde dolorem excepturi laboriosam.
+        Sit incidunt nostrum odio quidem amet corrupti, dolore libero at iusto, placeat quaerat. Reiciendis, quae ullam.
+    </p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime distinctio consectetur suscipit nam odit aperiam
+        qui vero recusandae adipisci, dolor odio optio labore porro iusto blanditiis amet laboriosam veritatis fugiat.
+    </p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus similique nemo odit quod cum. Eum adipisci
+        repellendus provident magni expedita deleniti nesciunt saepe, vero voluptatem, ad animi amet labore. Doloribus.
+    </p>
+
+
+
+    <script>
+        var parrafos = document.getElementsByTagName('p')
+        for (var i = 0; i < parrafos.length; i++) {
+            //OPCION 1
+            parrafos[i].style.backgroundColor = 'tomato'; // va entre comillas porque es un literal
+            parrafos[i].style.color = 'white'
+            parrafos[i].style.padding = '10rem'
+
+
+            //OPCION 2
+            parrafos[i].style = "background-color: red; color:black; padding:30px"
+
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM 7</title>
+</head>
+
+<body>
+
+
+    <section id="productos">
+        <article class="producto">
+            <h3>Titulo del producto 1</h3>
+        </article>
+        <article class="producto">
+            <h3>Titulo del producto 2</h3>
+        </article>
+        <article class="producto">
+            <h3>Titulo del producto 3</h3>
+        </article>
+    </section>
+
+
+
+    <script>
+        //Vamos a buscar el producto con titulo del producto 2 y lo vamos a poner en mayusculas
+
+        var productos = document.getElementById('productos');
+        /* console.log(productos) */
+
+        var listaProductos = productos.getElementsByClassName('producto')
+
+        /* console.log(listaProductos) */
+
+        //recojer el texto, transformarlo y volverlo a inyectar.
+        for (producto of listaProductos) {
+            var textoAcambiar = (producto.innerText == "Titulo del producto 2") ? producto.innerText.toUpperCase() :
+                producto.innerText;
+            console.log(textoAcambiar) //hay que inyectarlo al html 
+            producto.innerHTML = '<h3>' + textoAcambiar + '</h3>'
+        }
+    </script>
+</body>
+
+</html>

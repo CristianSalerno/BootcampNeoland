@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM 9</title>
+</head>
+
+<body>
+
+
+
+
+
+
+
+
+
+    <script>
+        //cuadrado de color verde de la medidad que nosotros quisieramos y un cuadrado rojo de la misma medida, poner los cuadrados que queramos.
+        var numeroCuadrados = 10 //es la unica etiqueta que se puede
+        var ancho = 100
+
+        for (var i = 0; i < numeroCuadrados; i++) {
+            document.body.innerHTML += '<div></div>' //+= no suscribe lo que tenia antes de entrar al ciclo
+        }
+        var cuadrados = document.getElementsByTagName('div');
+        var contador = 0
+
+        for (cuadrado of cuadrados) {
+            cuadrado.style.width = ancho + 'px'
+            cuadrado.style.height = ancho + 'px'
+            cuadrado.style.backgroundColor = (contador % 2 == 0) ? 'green' : 'black';
+            contador++
+        }
+
+
+
+        /* function pintarCuadrados(pColor, pTamaño) {
+            for (var i = 0; i < numeroCuadrados; i++) {
+                document.body.innerHTML += '<div></div>'
+            }
+        } */
+    </script>
+</body>
+
+</html>

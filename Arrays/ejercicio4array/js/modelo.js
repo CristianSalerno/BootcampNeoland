@@ -1,5 +1,6 @@
 var listaDePacientes = [
     paciente1 = {
+        'id': 1,
         'nombre': 'Juan',
         'apellido': 'Pérez',
         'diagnostico': 'Fiebre',
@@ -9,6 +10,7 @@ var listaDePacientes = [
     },
 
     paciente2 = {
+        'id': 2,
         'nombre': 'Mario',
         'apellido': 'Garcia',
         'diagnostico': 'Gastroenteritis',
@@ -18,6 +20,7 @@ var listaDePacientes = [
     },
 
     paciente3 = {
+        'id': 3,
         'nombre': 'Ana',
         'apellido': 'Martinez',
         'diagnostico': 'Faringitis',
@@ -27,6 +30,7 @@ var listaDePacientes = [
     },
 
     paciente4 = {
+        'id': 4,
         'nombre': 'Bea',
         'apellido': 'Pérez',
         'diagnostico': 'Tos',
@@ -36,6 +40,7 @@ var listaDePacientes = [
     },
 
     paciente5 = {
+        'id': 5,
         'nombre': 'Carlos',
         'apellido': 'Chacon',
         'diagnostico': 'Gripe',
@@ -45,6 +50,7 @@ var listaDePacientes = [
     },
 
     paciente6 = {
+        'id': 6,
         'nombre': 'Olivia',
         'apellido': 'Perez',
         'diagnostico': 'Gripe',
@@ -54,6 +60,7 @@ var listaDePacientes = [
     },
 
     paciente7 = {
+        'id': 7,
         'nombre': 'Paula',
         'apellido': 'Vega',
         'diagnostico': 'Bronquitis',
@@ -63,6 +70,7 @@ var listaDePacientes = [
     },
 
     paciente8 = {
+        'id': 8,
         'nombre': 'Pablo',
         'apellido': 'Carrera',
         'diagnostico': 'Otitis',
@@ -72,6 +80,7 @@ var listaDePacientes = [
     },
 
     paciente9 = {
+        'id': 9,
         'nombre': 'Manuel',
         'apellido': 'Nieto',
         'diagnostico': 'Gripe',
@@ -81,6 +90,7 @@ var listaDePacientes = [
     },
 
     paciente10 = {
+        'id': 10,
         'nombre': 'Ramon',
         'apellido': 'Dominguez',
         'diagnostico': 'Sinusitis',

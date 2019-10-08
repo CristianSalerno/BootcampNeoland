@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dom 12</title>
+</head>
+
+<body>
+
+
+
+    <script>
+        //pintar cuadrado
+        /* var cuadrado = '<div style="background-color:red; width:100px; height:100px";></div>'
+
+        document.body.innerHTML = cuadrado; */
+
+        //creo el elemento de HTML
+        var cuadrado = document.createElement('div');
+        //creo el texto que va a ir dentro del div
+        var texto = document.createTextNode('cuadrado');
+        //meto el texto dentro del div
+        cuadrado.appendChild(texto);
+        //tiro al body o la seccion correspondiente el cuadrado con el texto dentro.
+        document.body.appendChild(cuadrado)
+        cuadrado.style.backgroundColor = 'red';
+        cuadrado.style.width = '100px';
+        cuadrado.style.height = '100px';
+    </script>
+</body>
+
+</html>

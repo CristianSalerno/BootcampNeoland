@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM 13</title>
+</head>
+
+<body>
+
+
+
+
+    <script>
+        var listaPersonas = new Array('pepe', 'Lucia', 'Raul', 'Gema', 'Juan')
+
+
+        //Crear una lista no ordenada cuyos elementos sean los miembros de la lista.
+
+
+        var lista = document.createElement('ul')
+        for (var i = 0; i < listaPersonas.length; i++) {
+            var li = document.createElement('li');
+            var textoLi = document.createTextNode(listaPersonas[i])
+            li.appendChild(textoLi);
+            lista.appendChild(li);
+        }
+        document.body.appendChild(lista);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM 10</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .horizontal li {
+            display: inline-block;
+            width: 18%;
+        }
+
+        .vertical li {
+            display: block;
+            text-align: center;
+        }
+
+        ul li a {
+            display: block;
+            background-color: black;
+            color: white;
+            margin: 1%;
+            text-decoration: none;
+        }
+
+        ul {
+            list-style: none;
+        }
+    </style>
+</head>
+
+<body>
+    <ul id="menu">
+        <li><a href="">Item 1</a></li>
+        <li><a href="">Item 2</a></li>
+        <li><a href="">Item 3</a></li>
+        <li><a href="">Item 4</a></li>
+        <li><a href="">Item 5</a></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+    <script>
+        var menu = document.getElementById('menu');
+        var tipo = prompt('Dime que tipo de menu, horizontal o vertical')
+
+
+        menu.className = tipo;
+        menu.id += ' menuretocado' //para agregar 2 id, importante para el uso de asignaciòn de una o mas clases.
+
+
+        var enlaces = menu.getElementsByTagName('a')
+
+        for (enlace of enlaces) {
+            enlace.href = "http://www.neoland.es"
+        }
+    </script>
+</body>
+
+</html>

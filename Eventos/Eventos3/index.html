@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Eventos 2</title>
+</head>
+
+<body>
+
+    <div id="imagen">
+        <img src="" />
+    </div>
+
+    <button onclick="cambiarImagen(this)">Anterior</button>
+    <button onclick="cambiarImagen(this)">Siguiente</button>
+
+
+
+    <script>
+        var imagen = document.querySelector('#imagen img')
+        var numeroImagen = 0;
+        var numeroTotal = 2;
+        imagen.src = "Images/imagen" + numeroImagen + ".jpg"
+
+        /*  function cambiarImagen(pObjeto) {
+             pObjeto.innerText == 'Anterior' ? numeroImagen-- : numeroImagen++
+
+             imagen.src = 'images/imagen' + numeroImagen + '.jpg'
+             alert(numeroImagen)
+         } */
+
+        //Carrusel de imagenes .
+        function cambiarImagen(pObjeto) {
+            if (pObjeto.innerText == "Anterior" && numeroImagen > 1) {
+                numeroImagen--
+            } else if (pObjeto.innerText == "Siguiente" && numeroImagen < numeroTotal - 1) {
+                numeroImagen++
+
+            } else if (numeroImagen == 0) {
+                numeroImagen = numeroTotal - 1
+            } else {
+                numeroImagen = 0;
+            }
+            console.log(numeroImagen)
+
+            imagen.src = 'images/imagen' + numeroImagen + '.jpg'
+
+        }
+    </script>
+</body>
+
+</html>

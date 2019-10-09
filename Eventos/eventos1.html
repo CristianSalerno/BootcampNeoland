@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Eventos 1</title>
+</head>
+
+<body>
+
+    <ul>
+        <li id="blue" onclick="cambiarColor(this.id)" onmouseover="ponerMayusculas(this)"
+            onmouseout="cambiarAMinusculas(this)">Azul</li>
+        <li id="green" onclick="cambiarColor(this.id)" onmouseover="ponerMayusculas(this)"
+            onmouseout="cambiarAMinusculas(this)">Verde</li>
+        <li id="red" onclick="cambiarColor(this.id)" onmouseover="ponerMayusculas(this)"
+            onmouseout="cambiarAMinusculas(this)">Rojo</li>
+    </ul>
+
+    <script>
+        function cambiarColor(pColor) {
+            document.body.style.backgroundColor = pColor;
+            document.body.style.color = "white"
+
+        }
+
+
+        function ponerMayusculas(pObjeto) {
+            /*  console.log(pObjeto.innerText.toUpperCase()) */
+            pObjeto.innerText = pObjeto.innerText.toUpperCase()
+        }
+
+        function cambiarAMinusculas(pObjeto) {
+            //Inyecto el codigo al HTML.
+            pObjeto.innerText = pObjeto.innerText.toLowerCase();
+        }
+    </script>
+
+</body>
+
+</html>

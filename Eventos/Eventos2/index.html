@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Eventos 2</title>
+</head>
+
+<body>
+
+    <div id="imagen">
+        <img src="" />
+    </div>
+
+    <button id="0" onclick="cambiarImagen(this.id)">Anterior</button>
+    <button id="1" onclick="cambiarImagen(this.id)">Siguiente</button>
+
+
+
+    <script>
+        var imagen = document.querySelector('#imagen img')
+        var imagenes = ("Images/imagen1.jpg", "Images/imagen2.jpg")
+
+
+
+        function cambiarImagen(pNumero) {
+            var imagen = document.querySelector('#imagen img')
+            imagen.src = 'images/imagen' + pNumero + '.jpg'
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dom 15 - Query selector</title>
+</head>
+
+<body>
+
+    <header>
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">Contacto</a></li>
+            <li><a href="">Galeria</a></li>
+        </ul>
+    </header>
+    <main>
+
+    </main>
+    <footer>
+        <ul>
+            <li><a href="">Item 1</a></li>
+            <li><a href="">Item 2</a></li>
+        </ul>
+    </footer>
+
+    <script>
+        var headerOld = document.getElementsByTagName('header')[0] //me paro en el Header
+        var enlaces = headerOld.getElementsByTagName('a') //me posiciono en los enlaces <a>
+
+
+
+
+        //con query selector es = terminologia CSS y Herencia.
+        var enlacesHeaderNew = document.querySelectorAll('header ul li a')
+
+        console.log(enlacesHeaderNew)
+    </script>
+</body>
+
+</html>

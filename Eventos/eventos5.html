@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Eventos 5</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+
+        }
+
+        button {
+            margin: 10px;
+            color: green;
+            padding: 10px;
+        }
+
+        .cuadrado {
+            width: 100px;
+            height: 100px;
+            background: white;
+            border: 1px solid black;
+            transition: 0.3s;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <button>izquierda</button> <button>derecha</button>
+    <button>arriba</button><button>abajo</button>
+    <hr>
+
+    <div class="cuadrado">
+
+    </div>
+
+
+
+
+
+
+    <script>
+        var botones = document.querySelectorAll('button')
+        for (boton of botones) {
+            boton.addEventListener('click', moverCuadrado)
+        }
+        var cuadrado = document.querySelector('.cuadrado')
+
+        var posicionInicialX = 0;
+        var posicionInicialY = 0;
+
+
+        function moverCuadrado(e) {
+
+            switch (e.target.innerText) {
+
+                case 'izquierda':
+                    posicionInicialX -= 10
+                    cuadrado.style.background = 'tomato'
+                    //muevo el boton a la izquierda
+                    break;
+                case 'derecha':
+                    posicionInicialX = posicionInicialX + 10
+                    //muevo el boton a la derecha
+                    cuadrado.style.background = 'green';
+                    break;
+                case 'arriba':
+                    posicionInicialY -= 10;
+                    cuadrado.style.background = 'blue'
+                    break;
+                case 'abajo':
+                    posicionInicialY += 10;
+                    cuadrado.style.background = 'purple'
+                    break;
+            }
+            cuadrado.style.marginLeft = posicionInicialX + 'px';
+            cuadrado.style.marginTop = posicionInicialY + 'px'
+        }
+    </script>
+</body>
+
+</html>

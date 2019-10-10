@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Atributos Data</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <ul id="menu">
+        <li data-color="blue" data-transition="1s">Azul</li>
+        <li data-color="green" data-transition="5s">Verde</li>
+        <li data-color="#ff0000" data-transition="10s">Rojo</li>
+    </ul>
+    <h1 id="dataset"></h1>
+
+
+
+
+    <script>
+        var botones = document.querySelectorAll('#menu li');
+        botones.forEach(function (boton) {
+            boton.addEventListener('click', function (e) {
+                e.target.dataset.newDataSet = e.target.innerText;
+                cambiarColor(e.target.dataset);
+            })
+        });
+
+
+        function cambiarColor(pEstilos) {
+            document.body.style.background = pEstilos.color;
+            document.body.style.transition = pEstilos.transition;
+            document.getElementById('dataset').innerText = pEstilos.newDataSet
+        }
+    </script>
+</body>
+
+</html>

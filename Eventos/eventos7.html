@@ -5,11 +5,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Eventos 7</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .circulo {
+            width: 300px;
+            height: 300px;
+            background-color: red;
+            border-radius: 50%;
+            position: absolute;
+
+            /* margin: 0 auto; */
+        }
+    </style>
+    <title>Eventos de raton (mouse)</title>
+
 </head>
 
 <body>
 
+    <div class="circulo"></div>
+
+
+
+
+    <script>
+        window.addEventListener('resize', recalcular);
+        window.onlodad = recalcular();
+
+        function recalcular() {
+            var altoPagina = window.outerHeight;
+            var anchoPagina = window.outerWidth;
+
+
+            var circulo = document.querySelector('.circulo')
+            circulo.style.top = (altoPagina / 2) - 150 + 'px';
+            circulo.style.left = (anchoPagina / 2) - 150 + 'px'
+        }
+    </script>
 </body>
 
 </html>

@@ -14,6 +14,9 @@
 
 
     <script>
+        //Reverse Words 
+
+
         function reverseWords(str) {
             console.log(str)
             return str.split(' ').reverse().join(' ');
@@ -21,6 +24,27 @@
         }
 
         console.log(reverseWords('hello World'))
+
+
+        //Ascensor
+
+        function elevator(ascensor1Piso, ascensor2Piso, calledFrom) {
+            const distanciaAsc1 = ascensor1Piso - calledFrom;
+            const distanciaAsc2 = ascensor2Piso - calledFrom;
+
+            if (distanciaAsc1 === distanciaAsc2) {
+                return 'Right';
+            }
+
+            if (distanciaAsc1 > distanciaAsc2) {
+                return 'Left';
+            }
+
+            if (distanciaAsc2 > distanciaAsc1) {
+                return 'Right';
+            }
+
+        }
     </script>
 </body>
 

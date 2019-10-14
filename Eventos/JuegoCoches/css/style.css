@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.monza {
+    width: 900px;
+    position: relative;
+    margin: 0 auto;
+    background: #444;
+}
+
+.monza .carril {
+    height: 100px;
+    width: 100%;
+    padding: 25px 0px;
+    border-bottom: 2px dashed white;
+}
+
+.monza .carril:nth-child(3) {
+    border-bottom: 0px;
+}
+
+.carril .coche {
+    width: 100px;
+    height: 50px;
+    text-align: center;
+    padding: 15px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    font-size: 80%;
+    transition: 0.5s;
+}
+
+.monza .carril #ferrari {
+    background: tomato;
+}
+
+.monza .carril #mercedes {
+    background: lightgray;
+}
+
+.monza .carril #redbull {
+    background: rgba(109, 109, 240, 0.377);
+}
+
+#mensaje {
+    font-weight: bold;
+    font-size: 120%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.monza .meta {
+    position: absolute;
+    width: 300px;
+    background: rgba(255, 255, 54, 0.719);
+    text-align: center;
+    transform: rotateZ(90deg);
+    right: 0px;
+    /* posicionar a la derecha del div */
+    top: 140px;
+}

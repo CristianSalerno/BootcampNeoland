@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Eventos 5</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+
+        }
+
+        button {
+            margin: 10px;
+            color: green;
+            padding: 10px;
+        }
+
+        .coche1 {
+            width: 100px;
+            height: 100px;
+            background: rgb(240, 109, 109);
+            border: 1px solid black;
+            transition: 0.3s;
+        }
+
+        .coche2 {
+            width: 100px;
+            height: 100px;
+            background: rgb(90, 39, 39);
+            border: 1px solid black;
+            transition: 0.3s;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <button id="uno">izquierda</button> <button id="uno">derecha</button>
+
+    <hr>
+
+    <div class="coche1">
+
+    </div>
+    <button id="dos">acelera</button> <button id="dos">frena</button>
+
+    <hr>
+
+    <div class="coche2">
+
+    </div>
+
+
+
+
+
+
+    <script>
+        var botones = document.querySelectorAll('#uno')
+        for (boton of botones) {
+            boton.addEventListener('click', moverCoche)
+        }
+        var coche1 = document.querySelector('.coche1')
+
+        var posicionInicialX = 0;
+        var posicionInicialY = 0;
+
+
+        function moverCoche(e) {
+
+            switch (e.target.innerText) {
+
+                case 'izquierda':
+                    posicionInicialX -= 10
+                    //muevo el boton a la izquierda
+                    break;
+                case 'derecha':
+                    posicionInicialX = posicionInicialX + 10
+                    //muevo el boton a la derecha
+                    break;
+            }
+            coche1.style.marginLeft = posicionInicialX + 'px';
+            coche1.style.marginTop = posicionInicialY + 'px'
+        }
+
+        var botonDos = document.querySelectorAll('#dos')
+        var coche2 = document.querySelector('div .coche2')
+
+        for (boton of botones) {
+            debugger;
+            botonDos.addEventListener('click', moverCoche2)
+        }
+
+        function moverCoche2(event) {
+
+            switch (event.target.innerText) {
+
+                case 'acelera':
+                    posicionInicialX -= 10
+                    coche2.style.background = 'tomato'
+
+                    break;
+                case 'frena':
+                    posicionInicialX = posicionInicialX + 10
+            }
+            coche2.style.marginLeft = posicionInicialX + 'px';
+            coche2.style.marginTop = posicionInicialY + 'px'
+        }
+    </script>
+</body>
+
+</html>

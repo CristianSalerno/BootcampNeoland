@@ -1,0 +1,44 @@
+.escenario {
+    border: 1px solid black;
+    width: 816px;
+    margin: 0 auto;
+    height: 768px;
+    background-image: url(../images/fondo.jpg);
+    background-position: 0px 0px;
+    transition: 0.2s;
+    position: relative;
+    overflow: hidden;
+    /* se elimina lo que sale del escenario */
+}
+
+#runner {
+    position: absolute;
+    bottom: 30px;
+    left: 100px;
+}
+
+#runner img {
+    display: inline-block;
+    transition: 0.5ms;
+}
+
+.malo {
+    width: 100px;
+    height: 100px;
+    bottom: 30px;
+    right: 0;
+    background-image: url('https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn2.scratch.mit.edu%2Fget_image%2Fgallery%2F1792329_170x100.png%3Fv%3D1451967049.3&f=1&nofb=1');
+    background-size: cover;
+    position: absolute;
+}
+
+
+.malo2 {
+    width: 100px;
+    height: 100px;
+    bottom: 30px;
+    right: 0;
+    background-image: url('https://cdn2.scratch.mit.edu/get_image/user/14754134_90x90.png');
+    background-size: cover;
+    position: absolute;
+}

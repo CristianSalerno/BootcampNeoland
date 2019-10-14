@@ -7,7 +7,7 @@ var mercedesInterval = setInterval(acelerarMercedes, 100);
 var redBullInterval = setInterval(acelerarRedBull, 100);
 
 //Eventos de teclado, los lanza el documento.
-document.addEventListener('keypress', acelerarFerrari)
+document.addEventListener('keydown', acelerarFerrari)
 
 var avanceFerrari = 0;
 var avanceRedBull = 0;
@@ -26,7 +26,7 @@ function acelerarFerrari(e) {
             break;
         case 78:
             if (nitro > 0) {
-                avanceFerrari += 40;
+                avanceFerrari += 30;
                 nitro--;
             }
             break;
@@ -52,7 +52,7 @@ function acelerarMercedes() {
 }
 
 function acelerarRedBull() {
-    avanceRedBull += Math.random() * 20;
+    avanceRedBull += Math.random() * 30;
     if (avanceRedBull <= posicionFinal) {
         redbull.style.marginLeft = avanceRedBull + 'px';
     } else {

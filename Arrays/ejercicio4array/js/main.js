@@ -126,5 +126,5 @@ var otraListaFiltrada2 = filtrarPorDiagnostico(listaDePacientes, 'Gripe')
 console.log(otraListaFiltrada2)
 
 var miGranLista = otraListaFiltrada.concat(otraListaFiltrada2) 
-Hacer una funcion que saque por pantalla 2 o mas listas filtradas sin pacientes repetidos.
-*/
+
+ */

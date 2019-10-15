@@ -60,3 +60,42 @@ function cargarDiagnostico(event) {
 
 
 //filtro por edades y diagnostico
+
+
+var min = document.getElementById('min');
+var max = document.getElementById('max');
+var diag = document.getElementById('diag');
+
+var btnFiltrarTodo = document.getElementById('filtrarTodo')
+btnFiltrarTodo.addEventListener('click', filtrarDiagEdad)
+
+function filtrarDiagEdad(e) {
+    //Paso 1: quiero sacar con un alert cada uno de los valores del filtro.
+    //3 alerts
+
+    var menor = parseInt(min.value);
+    var mayor = parseInt(max.value);
+    var diagnostico = diag.value;
+
+
+    if (diagnostico != '') {
+        var listaFiltradaFinal = filtrarPorEdad(filtrarPorDiagnostico(listaDePacientes, diagnostico), menor, mayor)
+
+        pintarPacientes(listaFiltradaFinal);
+    } else {
+        var listaEdades = filtrarPorEdad(listaDePacientes, menor, mayor);
+        pintarPacientes(listaEdades);
+    }
+}
+
+var buscador = document.getElementById('search');
+buscador.addEventListener('click', buscar);
+
+var input = document.getElementById('inputSearch')
+
+
+function buscar(e) {
+    var palabraBuscar = input.value;
+
+    pintarPacientes(filtrarPorApellido(listaDePacientes, palabraBuscar));
+}

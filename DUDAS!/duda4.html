@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Objetos</title>
+</head>
+
+<body>
+    <button id="boton"></button>
+
+
+    <script>
+        //objeto -tiene propiedades y tiene metodos
+
+        var listaCompra = new Array('lechuga', 'tomate', 'carne', 'pescado', 'fruta');
+        //console.log(listaCompra)
+
+        var nombre = 'cristian'
+        //console.log(Object(nombre))
+
+        //objet literal - JSON
+
+        var persona = {
+            id: 0,
+            nombre: 'Cristian',
+            apellido: 'Salerno',
+            edad: 28,
+            sacarNombre: function () {
+                return this.nombre + ' ' + this.apellido;
+            }
+        }
+
+        persona.telefono = '956954945'
+
+        console.log(persona);
+
+        //obejtos.HTML DOM
+
+
+        var miBoton = document.querySelector('#boton')
+        miBoton.style.backgroundColor = 'red';
+        miBoton.style.width = '100px';
+        miBoton.style.height = '100px';
+        miBoton.ClassName = 'miClase';
+        console.log(miBoton)
+    </script>
+</body>
+
+</html>

@@ -22,7 +22,7 @@ function moverEscenario() {
 
 function jump(e) {
     switch (e.keyCode) {
-        case 32:
+        case 38:
             //SALTAR
             mario.src = 'images/salto.gif';
             mario.style.display = 'inline-block'
@@ -34,7 +34,7 @@ function jump(e) {
 function down(e) {
 
     switch (e.keyCode) {
-        case 32:
+        case 38:
             mario.src = 'images/mario.gif'
             mario.style.paddingBottom = "0px"
             break;

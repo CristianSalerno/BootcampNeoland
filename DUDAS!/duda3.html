@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ForEach</title>
+</head>
+
+<body>
+
+
+
+
+    <script>
+        var listaCompra = new Array('lechuga', 'tomate', 'carne', 'pescado', 'fruta');
+
+        for (producto of listaCompra) {
+            var div = document.createElement('div');
+            var textoProducto = document.createTextNode(producto);
+            div.appendChild(textoProducto);
+            document.body.appendChild(div);
+        }
+
+        var listaColores = new Array('rojo', 'verde', 'azul', 'amarillo', 'violeta')
+        listaColores.forEach(colores => {
+            var div = document.createElement('div');
+            div.style.padding = '40px';
+            div.style.backgroundColor = 'black';
+            div.style.color = 'white';
+            div.style.textAlign = 'center';
+            var textoColores = document.createTextNode(colores);
+            div.appendChild(textoColores);
+            document.body.appendChild(div)
+        });
+    </script>
+</body>
+
+</html>

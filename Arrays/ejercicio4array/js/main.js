@@ -113,8 +113,6 @@ function filtrarPorEdadDiagnostico(pListaPacientes, pDiagnostico, pEdad) {
             listaFiltrada.push(paciente)
         }
     }
-
-    console.log(listaFiltrada)
     return listaFiltrada
 }
 

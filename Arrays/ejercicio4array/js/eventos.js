@@ -97,5 +97,13 @@ var input = document.getElementById('inputSearch')
 function buscar(e) {
     var palabraBuscar = input.value;
 
+    var arrayApellido = new Array();
+
+    arrayApellido = palabraBuscar.split('');
+
+    arrayApellido[0] = arrayApellido[0].toUpperCase()
+
+    palabraBuscar = arrayApellido.join('');
+
     pintarPacientes(filtrarPorApellido(listaDePacientes, palabraBuscar));
 }

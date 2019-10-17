@@ -35,8 +35,13 @@
         //alert(enlace.attr('target'))
 
         //data atributes
+
+        //Los Data son solo de lectura, no se pueden modificar.
         var dataColor = enlace.data('color');
-        enlace.data('color', 'blue')
+
+
+        enlace.attr('data-color', 'tomato');
+        enlace.attr('data-id', '1')
     </script>
 </body>
 

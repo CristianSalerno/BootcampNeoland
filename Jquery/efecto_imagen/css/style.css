@@ -1,0 +1,31 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #ddd;
+}
+
+.container {
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    margin-top: 10px;
+}
+
+.container .info {
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5);
+    top: 0px;
+    left: 0px;
+    color: white;
+    text-align: center;
+    padding: 150px 0px;
+    display: none;
+}

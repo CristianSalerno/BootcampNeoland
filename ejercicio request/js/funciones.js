@@ -14,12 +14,12 @@ function cambiarListado(event) {
 function cargarContactosDos(event) {
     if (event.target.readyState == 4 && event.target.status == 200) {
         var listaDeContactos = new Array();
-        //console.log(event.target.response)
+        console.log(event.target.response)
         listaDeContactos = JSON.parse(event.target.response)
-
+        console.log(listaDeContactos)
 
         pintarLista(listaDeContactos.data);
-        //console.log(listaDeContactos.data)
+        console.log(listaDeContactos.data)
     }
 }
 

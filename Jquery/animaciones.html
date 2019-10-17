@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Animaciones</title>
+    <style>
+        .cuadrado {
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            background: rgb(216, 71, 71);
+            margin: 0 auto;
+            top: 0 auto;
+            margin-bottom: 10px;
+        }
+
+        .cuadradoDos {
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            background: rgba(238, 90, 64, 0.849);
+            margin: 0 auto;
+            top: 0 auto;
+            margin-bottom: 10px;
+            display: none;
+        }
+
+        .cuadradoTres {
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            background: rgb(255, 79, 48);
+            margin: 0 auto;
+            top: 0 auto;
+            display: none;
+        }
+
+        .cuadradoCuatro {
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            background: rgba(255, 79, 48, 0.804);
+            ;
+            margin: 0 auto;
+            top: 0 auto;
+            margin-top: 10px;
+        }
+
+        .cuadradoCinco {
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            background: rgba(255, 79, 48, 0.346);
+            ;
+            margin: 0 auto;
+            top: 0 auto;
+            margin-top: 10px;
+            display: none;
+        }
+
+        .cuadradoSeis {
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            background: rgba(255, 79, 48, 0.45);
+            margin: 0 auto;
+            top: 0 auto;
+            margin-top: 10px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cuadrado">
+
+    </div>
+    <div class="cuadradoDos">
+
+    </div>
+    <div class="cuadradoTres">
+
+    </div>
+    <div class="cuadradoCuatro">
+
+    </div>
+    <div class="cuadradoCinco">
+
+    </div>
+    <div class="cuadradoSeis">
+
+    </div>
+
+
+
+    <script src="archivos/jquery-3.4.1.min.js"></script>
+
+
+    <script>
+        //ocultar y mostrar un elemento 
+        $('.cuadrado').hide(500);
+        $('.cuadrado').delay(1000).show(500);
+        $('.cuadrado').animate({
+            'margin-right': '500px'
+        }, 1000)
+        //fade fadeIn fadeOut fadeTo
+        $('.cuadradoDos').fadeIn(4000);
+        $('.cuadradoDos').animate({
+            'margin-left': '500px'
+        }, 1000)
+
+        $('.cuadradoTres').fadeIn(5000);
+        $('.cuadradoTres').animate({
+            'margin-right': '500px'
+        }, 1000)
+
+        $('.cuadradoCuatro').fadeTo(1000, 0.5)
+        $('.cuadradoCuatro').animate({
+            'margin-left': '500px'
+        }, 1000)
+        $('.cuadradoCinco').fadeToggle(1000);
+        $('.cuadradoCinco').animate({
+            'margin-right': '500px'
+        }, 1000)
+
+        $('.cuadradoSeis').animate({
+            'margin-left': '500px'
+        }, 1000);
+    </script>
+
+
+</body>
+
+</html>

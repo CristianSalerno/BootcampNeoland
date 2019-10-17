@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Metodos de refinamiento</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .caja {
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            margin-top: 5px;
+            padding: 5px;
+            margin-left: 5px;
+        }
+
+        .especial {
+            width: 200px;
+            height: 200px;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="caja">caja 1</div>
+    <div class="caja">caja 2</div>
+    <div class="caja">caja 3</div>
+    <div class="caja">caja 4</div>
+    <div class="caja">caja 5</div>
+    <div class="caja">caja 6</div>
+    <div class="caja especial">
+        <p>Lorem</p>
+        <p>Lorem</p>
+        <p>Lorem</p>
+    </div>
+    <div class="caja">caja 8</div>
+    <div class="caja">caja 9</div>
+    <div class="caja">caja 10</div>
+
+
+
+    <script src="archivos/jquery-3.4.1.min.js"></script>
+    <script>
+        //posiciones de las cajas con el metodo EQ
+        $('.caja').eq(2).css('color', 'white')
+
+        //Metodo .not sirve para excluir la caja que tiene una clase extra.
+        $('.caja').not('.especial').css('background-color', 'red')
+        //Metodo .find es para buscar algo dentro de un objeto.
+        $('.especial').find('p').text('Cristian');
+        //Metodo Next Prev
+        $('.especial').prev().css('font-size', '20px')
+        $('.especial').next().css('font-size', '30px')
+        //Metodo parent y children
+        $('.caja').parent().css('background-color', '#999');
+        $('.especial').children().css('background-color', 'yellow');
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ATTR</title>
+</head>
+
+<body>
+
+    <ul id="menu">
+        <li><a data-color="red" href="#">1 item</a></li>
+        <li><a data-color="green" href="#">2 item</a></li>
+    </ul>
+
+
+
+    <script src="archivos/jquery-3.4.1.min.js"></script>
+    <script>
+        var enlace = $('#menu li a')
+        console.log(enlace)
+        //Agrego un atributo
+        enlace.attr('tittle', 'soy un tooltip')
+        //Modifico el atributo
+        enlace.attr('href', 'https://www.google.es')
+
+        //modificar varios atributos Json
+        enlace.attr({
+            'href': 'https://www.neoland.es',
+            'target': 'blank'
+        })
+
+        //alert(enlace.attr('target'))
+
+        //data atributes
+        var dataColor = enlace.data('color');
+        enlace.data('color', 'blue')
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS HTML</title>
+    <style>
+        .cuadrado {
+            width: 100px;
+            height: 100px;
+            background: black;
+            margin-bottom: 5px;
+            cursor: pointer;
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cuadrado"></div>
+    <div class="cuadrado"></div>
+    <div class="cuadrado"></div>
+    <div class="cuadrado"></div>
+    <div class="cuadrado"></div>
+
+
+    <script src="archivos/jquery-3.4.1.min.js"></script>
+
+    <script>
+        $('.cuadrado').css('background-color', 'tomato'); //Modifico una sola reglar
+
+        //Modifico mas estilos dentro de un Json
+
+        $('.cuadrado').css({
+            'border-radius': '50%',
+            'border': '2px solid black'
+        })
+    </script>
+</body>
+
+</html>

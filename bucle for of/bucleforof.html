@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Bucle for of</title>
 </head>
+
 <body>
-    
+
 
 
 
@@ -15,29 +17,26 @@
     <script>
         //pintar en pantalla solo aquellos animales que tengan mas de cuatro letras
 
-        var listaAnimales = new Array ('leon','perro','gato','periquito','sapo')
+        var listaAnimales = new Array('leon', 'perro', 'gato', 'periquito', 'sapo')
 
-        for(animal of listaAnimales)
-        {
-            if(animal.length == 4){
+        for (animal of listaAnimales) {
+            if (animal.length == 4) {
 
-            document.write('<h1>'+animal+'</h1>')
-            
+                document.write('<h1>' + animal + '</h1>')
+
             }
+            console.log(listaAnimales);
             break;
-            
+
         }
         document.write('<br></br>')
 
         //cambiar el orden de la lista, empezar a pintar por el final
 
-        for (var i=1; i<= listaAnimales.length ; i++){
-            document.write(listaAnimales[listaAnimales.length - i ])
+        for (var i = 1; i <= listaAnimales.length; i++) {
+            document.write(listaAnimales[listaAnimales.length - i])
         }
-
-        
-
-
     </script>
 </body>
+
 </html>

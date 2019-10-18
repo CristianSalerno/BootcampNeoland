@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+
+.button {
+    width: 30px;
+    height: 30px;
+    margin: 15px;
+    border: 1px solid black;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.5s;
+    float: left;
+}
+
+.button:hover {
+    background-color: rgb(133, 133, 133);
+}
+
+.button a {
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+}
+
+.desplegable {
+    position: relative;
+    float: right;
+    margin-left: 900px;
+    padding: 10px;
+    background: black;
+    height: 500px;
+    color: white;
+    right: -400px;
+    transition: 1s ease-in;
+
+}

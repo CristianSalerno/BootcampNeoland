@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul li a {
+    text-decoration: none;
+    color: black;
+    display: block;
+    padding: 10px;
+}
+
+
+ul li {
+    display: inline-block;
+    border-left: 1px solid black;
+}
+
+#marcador {
+    height: 45px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    border-bottom: 5px solid black;
+
+}

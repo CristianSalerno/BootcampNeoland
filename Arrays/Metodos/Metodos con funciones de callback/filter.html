@@ -13,7 +13,7 @@
 
 
     <script>
-        //me permite devolver un Array de 1 o mas elementos que cumplan la condicion de filtrado dentro de una funcion
+        //me permite devolver un Array de 1 o mas elementos que cumplan la condicion de filtrado dentro de una funcion True o false (Boleanos)
 
         //lista de notas 
 
@@ -28,13 +28,16 @@
         //                          recorre                
         listaAprobados = listaNotas.filter(buscarAprobados)
 
+        var listaSuspensos = listaNotas.filter(pNota => pNota <= 5)
+
+        console.log(listaSuspensos)
 
         //retorna true o false
         function buscarAprobados(pNota) {
             return (pNota >= 5)
         }
 
-        console.log(listaAprobados)
+        //console.log(listaAprobados)
 
 
         //lista suspensos
@@ -45,14 +48,14 @@
             return (itemNota < 5)
         })
 
-        console.log(listaSuspensos)
+        //console.log(listaSuspensos)
 
         //evolucion , Arrow function
 
         //si tengo un solo parametro va sin parentesis , si tengo dos separados por comas , van entre parentesis. tambien puedo quitar el return, funcion flecha a continuacion
         listaSuspensos = listaNotas.filter(itemNota => itemNota < 5)
 
-        console.log(listaSuspensos)
+        //console.log(listaSuspensos)
     </script>
 </body>
 

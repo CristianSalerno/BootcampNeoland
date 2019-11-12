@@ -43,6 +43,60 @@
                 return 'Right';
             }
         }
+
+
+        //Your task is to sum the differences between consecutive pairs in the array in descending order.
+
+        //For example: sumOfDifferences([2, 1, 10]) Returns 9
+
+        //Descending order: [10, 2, 1]
+
+        //Sum: (10 - 2) + (2 - 1) = 8 + 1 = 9
+
+        //If the array is empty or the array has only one element the result should be 0 (Nothing in Haskell).
+
+
+
+        function sumOffDiff(arr) {
+            arr.sort((a, b) => {
+                return b - a
+            });
+            let total = 0;
+            for (let i = 0; i < arr.length - 1; i++) {
+                total += arr[i] - arr[i + 1];
+            }
+            return total;
+        }
+
+        console.log(sumOffDiff([2, 1, 10, 5]));
+
+
+        //Return a new array consisting of elements which are multiple of their own index in input array (length > 1).
+
+        //Some cases: 
+        //[22, -6, 32, 82, 9, 25] =>  [-6, 32, 25]
+
+        //[68, -1, 1, -7, 10, 10] => [-1, 10]
+
+        //[-56,-85,72,-26,-14,76,-27,72,35,-21,-67,87,0,21,59,27,-92,68] => [-85, 72, 0, 68]
+
+        function multipleOfIndex(array) {
+            return array.filter((item, index) => item % index == 0)
+        }
+
+        console.log(multipleOfIndex([22, -6, 32, 82, 9, 25]))
+
+
+
+        //Remove first and last character 
+
+
+        function removeFirst(string) {
+            return string.substr(1, string.length - 2)
+        }
+
+
+        console.log(removeFirst('COMANDANTE'))
     </script>
 </body>
 

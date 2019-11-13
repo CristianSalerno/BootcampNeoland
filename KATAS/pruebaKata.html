@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>voltear palabras</title>
+    <title>Katas Codewars</title>
 </head>
 
 <body>
@@ -17,15 +17,14 @@
         //Reverse Words  CODEWARS
 
         function reverseWords(str) {
-            console.log(str)
             return str.split(' ').reverse().join(' ');
 
         }
-
+        console.log('Reverse WORDS CODEWARS')
         console.log(reverseWords('hello World'))
 
 
-        //Ascensor CODEWARS
+        //Elevator CODEWARS
 
         function elevator(ascensor1Piso, ascensor2Piso, calledFrom) {
             const distanciaAsc1 = ascensor1Piso - calledFrom;
@@ -43,7 +42,7 @@
                 return 'Right';
             }
         }
-
+        console.log('Excecute the function elevator with the params, p1 p2 and p3')
 
         //Your task is to sum the differences between consecutive pairs in the array in descending order.
 
@@ -68,6 +67,7 @@
             return total;
         }
 
+        console.log('Sum of differences betwen numbers:')
         console.log(sumOffDiff([2, 1, 10, 5]));
 
 
@@ -80,10 +80,11 @@
 
         //[-56,-85,72,-26,-14,76,-27,72,35,-21,-67,87,0,21,59,27,-92,68] => [-85, 72, 0, 68]
 
+
         function multipleOfIndex(array) {
             return array.filter((item, index) => item % index == 0)
         }
-
+        console.log('Multiple own index of numbers in Array')
         console.log(multipleOfIndex([22, -6, 32, 82, 9, 25]))
 
 
@@ -95,7 +96,7 @@
             return string.substr(1, string.length - 2)
         }
 
-
+        console.log('Remove First and Last Character.')
         console.log(removeFirst('COMANDANTE'))
     </script>
 </body>
